@@ -1,149 +1,25 @@
-# AnyChat: Chat with Your Documents
+# AnyChat
 
-AnyChat is a powerful chatbot that allows you to interact with your documents (PDF, TXT, DOCX, ODT, PPTX, CSV, etc.) in a natural and conversational way. It leverages the capabilities of LangChain, Ollama, Groq, Gemini, and Streamlit to provide an intuitive and informative experience.
+本仓库是「AnyChat」的安卓版本获取入口，附使用资料索引。
 
-[Video Demo](https://github.com/shitan198u/AnyChat/assets/74671269/6cdaf9ef-1b52-4ddc-bb45-721b3886f826)
+## 安装文件资源（夸克网盘）
 
+> **AnyChat 安装文件资源（夸克网盘）**：[https://pan.quark.cn/s/2a59057ce5d2](https://pan.quark.cn/s/2a59057ce5d2)
 
-## Features
+## 官方项目
 
-- **Conversational Interaction:** Ask questions about your documents and receive human-like responses from the chatbot.
-- **Multi-Document Support:** Upload and process various document formats, including PDFs, text files, Word documents, spreadsheets, and presentations.
-- **Website-Chat Support:** Chat with any valid website.
-- **Advanced Language Models:** Choose from different language models (LLMs) like Ollama, Groq, and Gemini to power the chatbot's responses.
-- **Embedding Models:** Select from Ollama Embeddings or GooglePalm Embeddings to enhance the chatbot's understanding of your documents.
-- **User-Friendly Interface:** Streamlit provides a clean and intuitive interface for interacting with the chatbot.
+- 上游项目：[shitan198u/AnyChat](https://github.com/shitan198u/AnyChat)
 
-## Installation
+## 更多资料
 
-### Prerequisites
+- [下载与安装教程](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/AnyChat/%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B.md)
+- [常见问题与使用技巧](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/AnyChat/%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7.md)
+- [自定义角色创建与肖像生成](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/AnyChat/%E8%87%AA%E5%AE%9A%E4%B9%89%E8%A7%92%E8%89%B2%E5%88%9B%E5%BB%BA%E4%B8%8E%E8%82%96%E5%83%8F%E7%94%9F%E6%88%90.md)
+- [账号注册与游客模式](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/AnyChat/%E8%B4%A6%E5%8F%B7%E6%B3%A8%E5%86%8C%E4%B8%8E%E6%B8%B8%E5%AE%A2%E6%A8%A1%E5%BC%8F.md)
+- [隐私政策与数据删除](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/AnyChat/%E9%9A%90%E7%A7%81%E6%94%BF%E7%AD%96%E4%B8%8E%E6%95%B0%E6%8D%AE%E5%88%A0%E9%99%A4.md)
+- [预设角色与角色卡收集](https://github.com/alipymanbu/Android/blob/master/%E5%AE%98%E7%BD%91%E7%89%88APP%E4%B8%8B%E8%BD%BD/AnyChat/%E9%A2%84%E8%AE%BE%E8%A7%92%E8%89%B2%E4%B8%8E%E8%A7%92%E8%89%B2%E5%8D%A1%E6%94%B6%E9%9B%86.md)
+- [全部软件目录](https://github.com/alipymanbu/Android/blob/master/%E5%85%A8%E9%83%A8%E8%BD%AF%E4%BB%B6%E7%9B%AE%E5%BD%95.md)
 
-- Python 3.10 or higher
-- A virtual environment (recommended)
+---
 
-### Clone the Repository
-
-Clone the AnyChat repository from GitHub:
-
-```bash
-git clone https://github.com/shitan198u/AnyChat.git
-```
-### Navigate to the working directory
-
-```bash
-cd Anychat
-```
-
-### Using `Rye` (Recommended)
-
-1. Install the Rye package manager: [Installation Guide](https://rye-up.com/guide/installation/)
-
-2. Sync the project:
-
-```bash
-rye sync
-```
-
-### Using `venv`
-
-1. Create a virtual environment:
-
-```bash
-python -m venv anychat-env
-```
-
-2. Activate the virtual environment:
-
-```bash
-source anychat-env/bin/activate
-```
-
-3. Install the required dependencies:
-
-```bash
-pip install -r requirements.txt
-```
-
-### Using `conda`
-
-1. Create a conda environment:
-
-```bash
-conda create -n anychat-env python=3.12
-```
-
-2. Activate the conda environment:
-
-```bash
-conda activate anychat-env
-```
-
-3. Install the required dependencies:
-
-```bash
-conda install --file requirements.txt
-```
-
-## Configuration
-
-- Rename the `secrets_example.toml` file to `secrets.toml` in the `src/anychat/.streamlit/` directory.
-
-## Ollama Installation
-
-To use Ollama for AnyChat, you need to install Ollama and download the necessary models. Follow the instructions below:
-
-1. **Install Ollama:**
-
-Visit the official Ollama website for installation instructions: [Ollama Download](https://ollama.com/download)
-
-2. **Download Ollama Models:**
-
-Open your terminal and run the following commands to download the required models:
-
-```bash
-ollama pull nomic-embed-text
-```
-
-This command downloads the `nomic-embed-text` model, which is necessary for running Ollama embeddings.
-
-```bash
-ollama pull openchat
-```
-
-This command downloads the `openchat` model, which you can use as a language model in AnyChat.
-
-## Usage
-
-1. **Set API Keys:**
-- If you're using Google Gemini or Groq, obtain the necessary API keys and store them securely in the `src/anychat/.streamlit/secrets.toml` file or Upload them in the chatbot interface.
-
-2. **Run the Application:**
-
-```bash
-cd src/anychat
-streamlit run chatbot.py
-```
-3. **Using Rye**
-
-```bash
-cd src/anychat
-rye run streamlit run chatbot.py
-```
-
-4. **Upload Documents:**
-- In the Streamlit interface, upload the documents you want to chat with.
-- Click the "Process" button to process the documents.
-
-5. **Start Chatting:**
-- Once the documents are processed, you can start asking questions in the chat input field.
-- The chatbot will analyze your documents and provide relevant answers based on their content.
-
-## License
-
-This project is licensed under the MIT License. See the `LICENSE` file for details.
-
-## Additional Notes
-
-- For optimal performance, ensure you have the necessary resources (CPU, RAM) to handle the document processing and LLM computations.
-- The chatbot's accuracy and responsiveness may vary depending on the complexity of your documents and the chosen LLM.
-- Consider using a GPU-enabled environment if you have access to one, as it can significantly speed up the processing.
+> 本仓库由上游项目 fork 而来，原始说明见[上游仓库](https://github.com/shitan198u/AnyChat)。
